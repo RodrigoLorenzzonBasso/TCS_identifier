@@ -22,6 +22,7 @@ int valid_f(char ch) {
 }
 
 int main(void) {
+  eoq = 5;
   char achar;
   int  length, valid_id;
   length = 0;
