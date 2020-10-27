@@ -5,6 +5,7 @@
 // no mínimo 1 caractere e no máximo 6 caracteres de comprimento
 // ----------------------------------------------------------------
 
+#include "identifier.h"
 #include <stdio.h>
 
 int valid_s(char ch) {
@@ -21,8 +22,34 @@ int valid_f(char ch) {
     return 0;
 }
 
-int main(void) {
-  eoq = 5;
+int identifier(char s[])
+{
+  char achar;
+  int length, valid_id;
+
+  length = 0;
+  achar = s[length];
+  valid_id = valid_s(achar);
+  if(valid_id) {
+    length = 1;
+  }
+  achar = s[length];
+  while(achar != '\0') {
+    if(!(valid_f(achar))) {
+      valid_id = 0;
+    }
+    length++;
+    achar = s[length];
+  }
+  if (valid_id && (length >= 1) && (length < 6)) {
+    return 0;
+  }
+  else {
+    return 1;
+  }	
+}
+
+/*int main(void) {
   char achar;
   int  length, valid_id;
   length = 0;
@@ -48,4 +75,4 @@ int main(void) {
     printf("Invalido\n");
     return 1;
   }
-}
+}*/
