@@ -1,15 +1,14 @@
 #include <stdio.h>
 #include "identifier.h"
 
-int main(void)
+int main(int argc, char *argv[])
 {
-	char id[100];
-	char test = id[101];
+	//char id[100];
 	int result;
 	
-	printf("Identificador: ");
-	scanf("%s", id);
-	result = identifier(id);
+	printf("Identificador: %s\n",argv[1]);
+	//scanf("%s", id);
+	result = identifier(argv[1]);
 	
 	if(result == 0)
 		printf("Válido\n");
