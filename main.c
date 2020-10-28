@@ -3,10 +3,8 @@
 
 int main(void)
 {
-	a = 1;
-	int b;
-	b++;
 	char id[100];
+	char test = id[101];
 	int result;
 	
 	printf("Identificador: ");
