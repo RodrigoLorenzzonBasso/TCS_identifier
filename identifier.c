@@ -41,7 +41,7 @@ int identifier(char s[])
     length++;
     achar = s[length];
   }
-  if (valid_id && (length >= 1) && (length < 6)) {
+  if (valid_id && (length >= 1) && (length <= 6)) {
     return 0;
   }
   else {
